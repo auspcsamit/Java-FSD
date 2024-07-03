@@ -1,0 +1,62 @@
+<!-- src/app/edit/edit.component.html -->
+<div class="container mt-4">
+  <h2>Edit Employee</h2>
+  <form (ngSubmit)="updateEmployee()">
+    <div class="mb-3">
+      <label for="fName" class="form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fName"
+        [(ngModel)]="employee.fName"
+        name="fName"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="lName" class="form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lName"
+        [(ngModel)]="employee.lName"
+        name="lName"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        [(ngModel)]="employee.email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="department" class="form-label">Department</label>
+      <input
+        type="text"
+        class="form-control"
+        id="department"
+        [(ngModel)]="employee.department"
+        name="department"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="salary" class="form-label">Salary</label>
+      <input
+        type="number"
+        class="form-control"
+        id="salary"
+        [(ngModel)]="employee.salary"
+        name="salary"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
